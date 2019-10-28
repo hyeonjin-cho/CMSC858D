@@ -17,7 +17,7 @@ rank_s() function will accept bit-vector array and return an array with the rank
 rank_b() function will also accept bit-vector array and return a dictionary that contains the ranks for each block within the corresponding superblock. Therefore the key of this outcome dictionary will be the index of the superblock, and the values (in array) will be the ranks at the beginning of each block within the superblock.
 rank_p() function will also accept bit-vector array and return a dictionary that contains every possible block types. The key of this outcome dictionary will be the possible block type, and the values (in array) will be the rank in each position within the block type.
 Finally, rank_indexAt() function will accept bit-vector and the target index and search through the array and dictionaries created from rank_s(), rank_b(), and rank_p() to add the ranks from each function to get the final rank of that index.
-I made a separate function, rank_indexAtforSelect() for SelectSupport.py (explained in README.md of SelectSupport.py)
+I made a separate function, rank_indexAtforSelect() for SelectSupport.py (explained in README.md of SelectSupport.py). rank_indexAt() function will also give an error message when the user gives out of range index and when the index user gave is not 1.
 
 # Difficult part
 
