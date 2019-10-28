@@ -16,7 +16,7 @@ select_rankOf() function will accept bit-vector array and target rank (the rank 
 
 # Difficult part
 
-This task was relatively easier compared to RankSupport.py. It only took me less than a day to figure out select_rankOf(), when I had rank_indexAt(). The most difficult part was that the regular rank_indexAt() would not work with select because I wrote the code to give an error message when the index from the user is not 1. Therefore, I made a rank_indexAt() derivative (called rank_indexAtforSelect()), which will give the rank at the index even if the index is not 1. 
+This task was relatively easier compared to RankSupport.py. It only took me less than a day to figure out select_rankOf(), when I had rank_indexAt(). The most difficult part was that the regular rank_indexAt() would not work with select because I wrote the code to give an error message when the index from the user is not 1. Therefore, I made a rank_indexAt() derivative (called rank_indexAtforSelect()), which will give the rank at the index even if the index is not 1. Also, generating the random-sized bit-vector and implementing select_rankOf() of that bit-vector took even more time than rank_indexAt() of RankSupport.py, so I only generated 500 random-sized bit-vector, instead of 1000 which I did for RankSupport.py.
 
 # 500_random.pdf
 
