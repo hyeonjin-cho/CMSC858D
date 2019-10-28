@@ -44,6 +44,7 @@ def btRank():
 	RANK = rank.rank_indexAt(bv, TARGET_INDEX)
 	end = time.time()
 	timeCost = end - start
+	bitSize = sys.getsizeof(RANK)
 
 	return SIZE, RANK, timeCost
 
