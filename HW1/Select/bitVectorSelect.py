@@ -38,9 +38,11 @@ def btSelect():
 	SELECT = select.select_rankOf(bv, TARGET_RANK)
 	end = time.time()
 	timeCost = end - start
+	
+	# this will give the size it took to implement RANK
 	bitSize = sys.getsizeof(SELECT)
 
-	return SIZE, SELECT, bitSize
+	return SIZE, SELECT, timeCost
 
 # repeat btSelect() n times and store in csv file
 for i in range(1000):
