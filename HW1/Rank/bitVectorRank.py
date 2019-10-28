@@ -44,9 +44,11 @@ def btRank():
 	RANK = rank.rank_indexAt(bv, TARGET_INDEX)
 	end = time.time()
 	timeCost = end - start
+	
+	# this will give the size it took to implement RANK
 	bitSize = sys.getsizeof(RANK)
 
-	return SIZE, RANK, bitSize
+	return SIZE, RANK, timeCost
 
 # repeat btRank() n times and store in csv file
 for i in range(1000):
