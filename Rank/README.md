@@ -1,4 +1,4 @@
-bitVectorRank.py will import RankSupport.py and BitVector.py (https://github.com/jeetsukumaran/supertramp/blob/master/supertramp/BitVector.py) to implement rank_indexAt().
+bitVectorRank.py and RankSupport.py import BitVector.py (https://github.com/jeetsukumaran/supertramp/blob/master/supertramp/BitVector.py) to implement rank_indexAt().
 
 # bitVectorRank.py
 
