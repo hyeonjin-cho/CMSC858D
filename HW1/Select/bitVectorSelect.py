@@ -1,7 +1,7 @@
 ########################################################################
 # Author: Hyeon Jin Cho
 # CMSC858D_HW1: Implementing bit vector select
-# Last updated: 10/26/2019
+# Last updated: 10/30/2019
 ########################################################################
 
 # Packages installed
@@ -14,8 +14,7 @@ import csv
 import sys
 
 # set seed for practice
-#random.seed(100)
-
+#random.seed(40)
 
 def btSelect():
 
@@ -38,14 +37,12 @@ def btSelect():
 	SELECT = select.select_rankOf(bv, TARGET_RANK)
 	end = time.time()
 	timeCost = end - start
-	
-	# this will give the size it took to implement RANK
 	bitSize = sys.getsizeof(SELECT)
 
 	return SIZE, SELECT, timeCost
 
 # repeat btSelect() n times and store in csv file
-for i in range(1000):
+for i in range(500):
 	if __name__ == '__main__':
 		test = btSelect()
 	with open("text_select.csv", 'a') as csvFile:
