@@ -20,5 +20,6 @@ This task was relatively easier compared to RankSupport.py. It only took me less
 
 # 500_random.pdf
 
-This pdf file depicts how much time SelectSupport.py took to get the index of the target rank. X-axis is size of bit-vector, randomly generated from size 1000 to 100000. I simply took difference of the time right before select_rankOf() and right after select_rankOf() to get the timeCost. Since select_rankOf() calls another function, getRank(), which is a recursive function, the time cost will be bigger than rank_indexAt(). The time complexity for select_rankOf() will be O(logn), and the pdf file does not support this. This might be because 
+This pdf file depicts how much time SelectSupport.py took to get the index of the target rank. X-axis is size of bit-vector, randomly generated from size 1000 to 100000. I simply took difference of the time right before select_rankOf() and right after select_rankOf() to get the timeCost. Since select_rankOf() calls another function, getRank(), which is a recursive function, the time cost will be bigger than rank_indexAt(). The time complexity for select_rankOf() will be O(logn), but the pdf file does not support this. This might be because of the time consumed when calling bv during rank_indexAt().
+*I only uploaded Figure 2 in the GitHub, but Figure 1 is also presented on ELMS submission.*
 *R programming was used to generate the plot.*
