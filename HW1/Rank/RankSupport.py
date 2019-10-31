@@ -9,7 +9,6 @@ from BitVector import BitVector
 from itertools import product
 import math
 
-
 class RankSupport():
 	def __init__(self, bv, size):
 		# size of bit-vector
