@@ -16,7 +16,6 @@ import sys
 # set seed for practice
 #random.seed(100)
 
-
 def btRank():
 	SIZE = random.randrange(1000,100000)
 	TARGET_INDEX = random.randrange(0,SIZE)
