@@ -4,7 +4,7 @@ bitVectorSelect.py and SelectSupport.py import RankSupport.py and BitVector.py (
 
 This python code will generate a random-sized random bit-vector array (range from 1000 to 100000) using BitVector.py Then it will call SelectSupport.py with the randomly generated bit-vector and the size of the bit-vector as its parameters.
 
-This process will be repeated 1000 times to generate the plot of the assignment (x-axis: bit-vector size, y-axis: time cost)
+This process will be repeated 500 times to generate the plot of the assignment (x-axis: bit-vector size, y-axis: time cost)
 
 # SelectSupport.py
 
@@ -16,9 +16,9 @@ select_rankOf() function will accept bit-vector array and target rank (the rank 
 
 # Difficult part
 
-This task was relatively easier compared to RankSupport.py. It only took me less than a day to figure out select_rankOf(), when I had rank_indexAt(). The most difficult part was that the regular rank_indexAt() would not work with select because I wrote the code to give an error message when the index from the user is not 1. Therefore, I made a rank_indexAt() derivative (called rank_indexAtforSelect()), which will give the rank at the index even if the index is not 1. Also, generating the random-sized bit-vector and implementing select_rankOf() of that bit-vector took even more time than rank_indexAt() of RankSupport.py, so I only generated 500 random-sized bit-vector, instead of 1000 which I did for RankSupport.py.
+This task was relatively easier compared to RankSupport.py. It only took me less than a day to figure out select_rankOf(), when I had rank_indexAt(). The most difficult part was that the regular rank_indexAt() would not work with select because I wrote the code to give an error message when the index from the user is not 1. Therefore, I made a rank_indexAt() derivative (called rank_indexAtforSelect()), which will give the rank at the index even if the index is not 1. Also, generating the random-sized bit-vector and implementing select_rankOf() of that bit-vector took even more time than rank_indexAt() of RankSupport.py, so I only generated 500 random-sized bit-vector, instead of 1000 which I did for RankSupport.py. Another difficulty that I encountered during this programming was figuring out the time complexity. I expected to have O(logn) time complexity, however, the graph gave more linear-like graph. At first, the time it took for the largest bit-vector was around 0.5 seconds (Figure 1). I found out that I do not actually need to call for bit-vector every time, so as a result successfully reduced by 1/5 (Figure 2), by just removing a line of code that called the bit-vector. However, the graph still looks more linear than logarithmic.
 
 # 500_random.pdf
 
-This pdf file depicts how much time SelectSupport.py took to get the index of the target rank. X-axis is size of bit-vector, randomly generated from size 1000 to 100000. I simply took difference of the time right before select_rankOf() and right after select_rankOf() to get the timeCost. Since select_rankOf() calls another function, getRank(), which is a recursive function, the time cost will be bigger than rank_indexAt(). The time complexity for select_rankOf() will be O(logn), and the pdf file supports this. Again, there are some outliers, but the number of outliers are comparatively smaller than the outcome from RankSupport.py, and the outliers are not too slow either. 
+This pdf file depicts how much time SelectSupport.py took to get the index of the target rank. X-axis is size of bit-vector, randomly generated from size 1000 to 100000. I simply took difference of the time right before select_rankOf() and right after select_rankOf() to get the timeCost. Since select_rankOf() calls another function, getRank(), which is a recursive function, the time cost will be bigger than rank_indexAt(). The time complexity for select_rankOf() will be O(logn), and the pdf file does not support this. This might be because 
 *R programming was used to generate the plot.*
