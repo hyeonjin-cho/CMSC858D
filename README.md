@@ -1,6 +1,6 @@
 # CMSC858D
 
-Homework assignments and Projects for CMSC858D are stored in this repository.
+Homework assignments and Projects for CMSC858D are stored in this repository. All of the coding part should be run in Python 3.7.4.
 
 ## HW1 repository contains:
 - Rank
