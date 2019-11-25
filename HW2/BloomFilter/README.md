@@ -68,3 +68,19 @@ $ python bf.py query -i <output from ‘build’> -q <query input>
 ```
 
 *`-h` or `--help` option will list the options and their descriptions*
+
+## query1.txt
+
+There are no query keys present in the original set.
+
+## query2.txt
+
+There are 50% of query keys that are present in the original set.
+
+## query3.txt
+
+There are 100% of query keys that are present in the original set.
+
+# Difficult part
+
+The most difficult part I faced as I write the implementation was that the empirical false positive rate was very high than the desired false positive rate. I thought it was because of the size of my bloom filter, so I tried increasing the size by 50%. However, after talking with Dr. Patro, this could be easily fixed by changing math.log2 to math.log (natural log for python math package). Another difficult part was to efficiently visualize the results. Since I was not sure how many input keys to use to build a bloom filter, I tried with a range of input keys (from 500 to 10,000). I only used query1.txt result to draw the plot, because none of the queries in this set are present in the original set, therefore, it is the best representation of the false positive rate. 
