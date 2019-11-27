@@ -30,7 +30,7 @@ $ python bf.py build -k <test key input> -f <desired false positive rate> -n <nu
 
 ## testKey.txt
 
-This text file contains input key for bloom filter construction. It is randomly generated using online tool (http://www.unit-conversion.info/texttools/random-string-generator/). I only used first 9 alphabets (all lowercase) to generate 10,000 strings with length 5. The number of unique keys is calculated using python code:
+These text file contain input key for bloom filter construction. It is randomly generated using online tool (http://www.unit-conversion.info/texttools/random-string-generator/). I only used first 9 alphabets (all lowercase) to generate 10,000 strings with length 5. There are 6 different numbers of keys in each file: 10K, 20K, 50K, 100K, 200K, 500K, and 1M, all of which are indicated in the name of the files. The number of unique keys in each testKey text file is calculated using python code:
 ```
 >>> len(list(sorted(set(df))))
 ```
