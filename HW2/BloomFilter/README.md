@@ -38,15 +38,15 @@ These text file contain input key for bloom filter construction. It is randomly 
 ## Example
 
 ```
-$ python bf.py build -k testKey.txt -f 0.1 -n 9195 -o output.txt
+$ python bf.py build -k testKey100K.txt -f 0.1 -n 41097 -o output.txt
 ```
 The output.txt will look like this:
 ```
 0.1
-9195
-44068
+41097
+196959
 4
-bitarray(‘0000101110… 1110111101’)
+bitarray(‘1000111101… 0011110111’)
 ```
 The numbers in the output.txt are fpr, numKeys, size of bloom filter, number of hash functions, and the bitarray.
 
