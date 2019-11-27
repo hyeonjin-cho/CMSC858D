@@ -30,7 +30,10 @@ $ python bf.py build -k <test key input> -f <desired false positive rate> -n <nu
 
 ## testKey.txt
 
-This text file contains input key for bloom filter construction. It is randomly generated using online tool (http://www.unit-conversion.info/texttools/random-string-generator/). I only used first 9 alphabets (all lowercase) to generate 10,000 strings with length 5. The number of unique keys is 9195.
+This text file contains input key for bloom filter construction. It is randomly generated using online tool (http://www.unit-conversion.info/texttools/random-string-generator/). I only used first 9 alphabets (all lowercase) to generate 10,000 strings with length 5. The number of unique keys is calculated using python code:
+```
+>>> len(list(sorted(set(df))))
+```
 
 ## Example
 
@@ -83,4 +86,4 @@ There are 100% of query keys that are present in the original set.
 
 # Difficult part
 
-The most difficult part I faced as I write the implementation was that the empirical false positive rate was very high than the desired false positive rate. I thought it was because of the size of my bloom filter, so I tried increasing the size by 50%. However, after talking with Dr. Patro, this could be easily fixed by changing math.log2 to math.log (natural log for python math package). Another difficult part was to efficiently visualize the results. Since I was not sure how many input keys to use to build a bloom filter, I tried with a range of input keys (from 500 to 10,000, in GitHub I only uploaded 10,000 input keys). I only used query1.txt and query2.txt result to draw the plots, because query3.txt contains the queries that all are present in the original set. 
+The most difficult part I faced as I write the implementation was that the empirical false positive rate was very high than the desired false positive rate. I thought it was because of the size of my bloom filter, so I tried increasing the size by 50%. However, after talking with Dr. Patro, this could be easily fixed by changing math.log2 to math.log (natural log for python math package). Another difficult part was to efficiently visualize the results. Since I was not sure how many input keys to use to build a bloom filter, I tried with a range of input keys (from 10,000 to 1,000,000). I only used query1.txt and query2.txt result to draw the plots, because query3.txt contains the queries that all are present in the original set. 
