@@ -7,3 +7,7 @@ This R code consists of all the codes that are required to generate the plots in
 ## Final_Proj_evaluation.R
 
 This R code is the evaluation version of the Final_Proj.R. Please note that this code might take up to 1 hr to run on the local computer.
+
+## quants_mat.gz
+
+This is an input PBMC 4K data file that is generated from Alevin.
