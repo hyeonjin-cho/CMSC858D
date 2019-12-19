@@ -11,7 +11,7 @@ nbt=1
 q=9
 
 setwd("CMSC858D/Project/")
-files <- file.path("full_em/alevin/quants_mat.gz")
+files <- file.path("quants_mat.gz")
 file.exists(files)
 
 txi <- tximport(files, type="alevin")
